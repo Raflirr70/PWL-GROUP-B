@@ -42,58 +42,124 @@
                     
                 </div>
                 <div class="search px-5 h-auto flex items-center justify-center ">
-                    <div class="search rounded-lg overflow-hidden flex h-[55%] mr-20">
-                        <input type="text" class="text-black pl-3 w-[80%] h-[100%] pr-3">
-                        <input type="button" value="Cari" class="rounded-lg bg-slate-500 w-[30%] h-[100%] -ml-3 pr-8 font-bold pl-6 hover:font-extrabold">
+                    <div class="search overflow-hidden flex h-[45%]">
+                        <div><input type="text" class="flex justify-center text-white bg-gray-800 w-[100%] h-[100%] pl-3 pr-3 "></div>
+                        <div class="flex items-center bg-gray-600"><img class="h-[75%] hover:h-[80%] m-3" src="../src/picture/search(white).png" alt=""></div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="konten flex w[100%] h-auto p-3">
+<!-- Konten utama -->
+        <div class="konten flex w[100%] h-auto ml-3 p-3">
+<!-- Konten Utama kiri -->
             <div class="kontenkiri w-[75%] mr-[2%] h-auto inline-block">
+                <!-- BARIS PERTAMA -->
                 <div class="updatefilm w-[100%] h-[300px]">
                     <div class="judul flex h-1/6 items-center">
-                        <h2 class="text-xl"><b>Lates Updated Episode Videos</b></h2>
+                        <h2 class="text-xl"><b>Top Anime Videos</b></h2>
                     </div>
-                    <div class="filmslide flex h-5/6">
-                        <div class="h-[100%] w-1/6 mr-2 bg-slate-800 hover:scale-[102%] hover:brightness-125"></div>
-                        <div class="h-[100%] w-1/6 mr-2 bg-slate-800 hover:scale-[102%] hover:brightness-125"></div>
-                        <div class="h-[100%] w-1/6 mr-2 bg-slate-800 hover:scale-[102%] hover:brightness-125"></div>
-                        <div class="h-[100%] w-1/6 mr-2 bg-slate-800 hover:scale-[102%] hover:brightness-125"></div>
-                        <div class="h-[100%] w-1/6 mr-2 bg-slate-800 hover:scale-[102%] hover:brightness-125"></div>
-                        <div class="h-[100%] w-1/6 mr-2 bg-slate-800 hover:scale-[102%] hover:brightness-125"></div>
-                        
+                    <div class="flex h-5/6 overflow-hidden ">
+                        <div class="h-[110%] w-[3%] flex justify-center bg-slate-300 bg-opacity-50  -mt-[2%] -mr-[3%] z-10 text-gray-400 hover:bg-slate-800 hover:bg-opacity-90 hover:w-[4%] hover:text-gray-200 transition-all duration-300">
+                            <p class="my-auto font-extrabold scale-y-[500%] scale-x-[200%]"><</p>
+                        </div>
+
+                        <div class="filmslide flex w-[90%]" id="Anime-container"></div>
+
+                        <div class="h-[110%] w-[4%] flex justify-center bg-slate-300 bg-opacity-50 -ml-[1%] -mt-[2%] z-10 text-gray-400 hover:bg-slate-800 hover:bg-opacity-90 hover:w-[6%] hover:text-gray-200 transition-all duration-300">
+                            <p class="my-auto font-extrabold scale-y-[500%] scale-x-[200%]">></p>
+                        </div>
                     </div>
+                    
+                    <script>
+                        for (let i = 0; i < 5; i++) {
+                            const filmDiv = document.createElement('div');
+                            filmDiv.className = 'relative h-[100%] w-1/5 mr-2 bg-slate-800 text-gray-400 hover:text-gray-50 hover:font-bold hover:scale-[102%] hover:brightness-125 transition-all duration-300';
+                            
+                            const img = document.createElement('img');
+                            img.src = '../src/picture/bnh.jpeg';
+                            img.className = 'w-full h-full object-cover';
+                            
+                            const p = document.createElement('p');
+                            p.className = 'absolute h-[20%] top-auto pl-2 pr-2 inset-0 flex items-end font-semibold text-white bg-gradient-to-t from-black/80 to-transparent word-break overflow-hidden';
+                            p.textContent = 'Boku No Hero Academi';
+                
+                            filmDiv.appendChild(img);
+                            filmDiv.appendChild(p);
+                            document.getElementById('Anime-container').appendChild(filmDiv);
+                        }
+                    </script>
                 </div>
 
                 <div class="ExcitingMovie w-[100%] h-[300px] mt-5">
                     <div class="judul flex h-1/6 items-center">
-                        <h2 class="text-xl "><b>Lates Updated Episode Videos</b></h2>
+                        <h2 class="text-xl"><b>Top Film Videos</b></h2>
                     </div>
-                    <div class="filmslide flex h-5/6">
-                        <div class="h-[100%] w-1/6 mr-2 bg-slate-800 hover:scale-[102%] hover:brightness-125"></div>
-                        <div class="h-[100%] w-1/6 mr-2 bg-slate-800 hover:scale-[102%] hover:brightness-125"></div>
-                        <div class="h-[100%] w-1/6 mr-2 bg-slate-800 hover:scale-[102%] hover:brightness-125"></div>
-                        <div class="h-[100%] w-1/6 mr-2 bg-slate-800 hover:scale-[102%] hover:brightness-125"></div>
-                        <div class="h-[100%] w-1/6 mr-2 bg-slate-800 hover:scale-[102%] hover:brightness-125"></div>
-                        <div class="h-[100%] w-1/6 mr-2 bg-slate-800 hover:scale-[102%] hover:brightness-125"></div>
-                        
+                    <div class="flex h-5/6 overflow-hidden ">
+                        <div class="h-[110%] w-[3%] flex justify-center bg-slate-300 bg-opacity-50  -mt-[2%] -mr-[3%] z-10 text-gray-400 hover:bg-slate-800 hover:bg-opacity-90 hover:w-[4%] hover:text-gray-200 transition-all duration-300">
+                            <p class="my-auto font-extrabold scale-y-[500%] scale-x-[200%]"><</p>
+                        </div>
+
+                        <div class="filmslide flex w-[90%]" id="film-container"></div>
+
+                        <div class="h-[110%] w-[4%] flex justify-center bg-slate-300 bg-opacity-50 -ml-[1%] -mt-[2%] z-10 text-gray-400 hover:bg-slate-800 hover:bg-opacity-90 hover:w-[6%] hover:text-gray-200 transition-all duration-300">
+                            <p class="my-auto font-extrabold scale-y-[500%] scale-x-[200%]">></p>
+                        </div>
                     </div>
+                    
+                    <script>
+                        for (let i = 0; i < 5; i++) {
+                            const filmDiv = document.createElement('div');
+                            filmDiv.className = 'relative h-[100%] w-1/5 mr-2 bg-slate-800 text-gray-400 hover:text-gray-50 hover:font-bold hover:scale-[102%] hover:brightness-125 transition-all duration-300';
+                            
+                            const img = document.createElement('img');
+                            img.src = '../src/picture/revenge.jpg'; // Pastikan path ini benar
+                            img.className = 'w-full h-full object-cover';
+                            
+                            const p = document.createElement('p');
+                            p.className = 'absolute h-[20%] top-auto pl-2 pr-2 inset-0 flex items-end font-semibold text-white bg-gradient-to-t from-black/80 to-transparent word-break overflow-hidden';
+                            p.textContent = 'Revenge Of The Fallen';
+                
+                            filmDiv.appendChild(img);
+                            filmDiv.appendChild(p);
+                            document.getElementById('film-container').appendChild(filmDiv);
+                        }
+                    </script>
                 </div>
 
                 <div class="AsianCrimeFilm w-[100%] h-[300px] mt-5">
                     <div class="judul flex h-1/6 items-center">
                         <h2 class="text-xl"><b>Lates Updated Episode Videos</b></h2>
                     </div>
-                    <div class="filmslide flex h-5/6">
-                        <div class="h-[100%] w-1/6 mr-2 bg-slate-800 hover:scale-[102%] hover:brightness-125"></div>
-                        <div class="h-[100%] w-1/6 mr-2 bg-slate-800 hover:scale-[102%] hover:brightness-125"></div>
-                        <div class="h-[100%] w-1/6 mr-2 bg-slate-800 hover:scale-[102%] hover:brightness-125"></div>
-                        <div class="h-[100%] w-1/6 mr-2 bg-slate-800 hover:scale-[102%] hover:brightness-125"></div>
-                        <div class="h-[100%] w-1/6 mr-2 bg-slate-800 hover:scale-[102%] hover:brightness-125"></div>
-                        <div class="h-[100%] w-1/6 mr-2 bg-slate-800 hover:scale-[102%] hover:brightness-125"></div>
-                        
+                    <div class="flex h-5/6 overflow-hidden ">
+                        <div class="h-[110%] w-[3%] flex justify-center bg-slate-300 bg-opacity-50  -mt-[2%] -mr-[3%] z-10 text-gray-400 hover:bg-slate-800 hover:bg-opacity-90 hover:w-[4%] hover:text-gray-200 transition-all duration-300">
+                            <p class="my-auto font-extrabold scale-y-[500%] scale-x-[200%]"><</p>
+                        </div>
+
+                        <div class="filmslide flex w-[90%]" id="lates-container"></div>
+
+                        <div class="h-[110%] w-[4%] flex justify-center bg-slate-300 bg-opacity-50 -ml-[1%] -mt-[2%] z-10 text-gray-400 hover:bg-slate-800 hover:bg-opacity-90 hover:w-[6%] hover:text-gray-200 transition-all duration-300">
+                            <p class="my-auto font-extrabold scale-y-[500%] scale-x-[200%]">></p>
+                        </div>
                     </div>
+                    
+                    <script>
+                        for (let i = 0; i < 5; i++) {
+                            const filmDiv = document.createElement('div');
+                            filmDiv.className = 'relative h-[100%] w-1/5 mr-2 bg-slate-800 text-gray-400 hover:text-gray-50 hover:font-bold hover:scale-[102%] hover:brightness-125 transition-all duration-300';
+                            
+                            const img = document.createElement('img');
+                            img.src = '../src/picture/revenge.jpg'; // Pastikan path ini benar
+                            img.className = 'w-full h-full object-cover';
+                            
+                            const p = document.createElement('p');
+                            p.className = 'absolute h-[20%] top-auto pl-2 pr-2 inset-0 flex items-end font-semibold text-white bg-gradient-to-t from-black/80 to-transparent word-break overflow-hidden';
+                            p.textContent = 'Revenge Of The Fallen';
+                
+                            filmDiv.appendChild(img);
+                            filmDiv.appendChild(p);
+                            document.getElementById('lates-container').appendChild(filmDiv);
+                        }
+                    </script>
                 </div>
 <!-- HALAMAN REVIEW -->
                 <div class="reviewlayer w-[100%] h-auto mt-5">
@@ -277,7 +343,7 @@
 <!-- AKHIR HALAMAN KOMUNITAS -->
 
 
-            <div class="kontenkanan w-[23%] h-auto border-2">
+            <div class="kontenkanan w-[23%] h-auto border-2 ">
                 <div class="flex tabelkonten w-[100%] h-10 bg-gray-300 place-items-center">
                     <h1 class="ml-3"><b>Top Airing Anime</b></h1>
                     <p class="ml-auto mr-3 text-blue-800">menu</p>
