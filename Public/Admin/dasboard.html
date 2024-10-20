@@ -3,14 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Public/src/css/style.css">
+    <link rel="stylesheet" href="../src/css/style.css">
     <title>Document</title>
 </head>
 <body>
-    <div class="container mx-auto m-0 p-0 grid place-items-center h-screen bg-gray-100">
-        <div class="layerdasboard flex w-[90%] h-[85%] rounded-2xl overflow-hidden bg-white">
-            <div class="menudasboard m-4 bg-gray-800 w-[12%] h-[90%] rounded-xl"></div>
+    <!-- Container -->
+    <div class="mx-auto m-0 p-0 grid place-items-center h-screen bg-gray-100">
+        <!-- Layer Dasboard -->
+        <div class="flex w-[90%] h-[95%] rounded-2xl overflow-hidden bg-white">
+            <!-- Menu  -->
+            <div class="m-4 bg-gray-800 w-[12%] h-[95%] rounded-xl">
+                <div class="flex flex-col mt-6 items-center">
+                    <div><h2 class="font-bold text-white text-lg pb-1">Dasboard</h2></div>
+                    <div class="h-[2px] w-[80%] bg-gray-500"></div>
+                </div>
+                <div class="mt-20 flex">
+                    <ul class="text-lg font-bold w-full">
+                        <li class="flex justify-center items-center ml-[10%] w-[100%] h-10 rounded-2xl bg-white group relative overflow-hidden">
+                            <p class="absolute font-bold opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">Menu</p>
+                            <img src="../src/picture/menu(black).png" class="w-[30%] transition-opacity duration-300 ease-in-out group-hover:opacity-0">  
+                        </li>
+                        <li class="flex justify-center items-center w-[100%] h-10 hover:bg-slate-600 transition duration-600 group relative overflow-hidden">
+                            <p class="absolute text-white opacity-0 transition-opacity duration-600 ease-in-out group-hover:opacity-100">Pesan</p>
+                            <img src="../src/picture/pesan(white).png" class="w-[20%] transition-opacity duration-600 ease-in-out group-hover:opacity-0">  
+                        </li>
+                        <li class="flex justify-center items-center w-[100%] h-10 hover:bg-slate-600 transition duration-600 group relative overflow-hidden">
+                            <p class="absolute text-white opacity-0 transition-opacity duration-600 ease-in-out group-hover:opacity-100">Search</p>
+                            <img src="../src/picture/search(white).png" class="w-[15%] transition-opacity duration-600 ease-in-out group-hover:opacity-0">  
+                        </li>
+                        <li class="flex justify-center items-center w-[100%] h-10 hover:bg-slate-600 transition duration-600 group relative overflow-hidden">
+                            <p class="absolute text-white opacity-0 transition-opacity duration-600 ease-in-out group-hover:opacity-100">Pesan</p>
+                            <img src="../src/picture/pesan(white).png" class="w-[20%] transition-opacity duration-600 ease-in-out group-hover:opacity-0">  
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-20 w-[100%] h-[10%] flex items-center bg-blue-800">
+                    <div class="h-[30%] w-[100%] bg-gray-800"></div>
+                </div>
+                
+            </div>
+            <!-- /Menu -->
+            <!-- Konten Dasboard -->
+            <div class="h-[100%] w-[100%]">
+                <!-- Profil -->
+                <div class="flex w-[100%] h-[7%] mt-[1%] items-center">
+                    <ul class="flex w-[100%] h-[100%] justify-end mr-[3%]">
+                        <li class="h-[100%] flex items-center">
+                            <input type="text" class="rounded-md bg-gray-50 pl-4 pr-4 h-[55%] w-28 mr-2 border-b-2 border border-black border-opacity-10 shadow-xl focus:w-56 focus:outline-none focus:border transition-all duration-1000">
+                        </li>
+                        <li class="bg-white rounded-full h-[100%] aspect-square flex items-center justify-center">
+                            <img src="../src/picture/search(black).png" class="h-[50%] w-[50%] object-cover">
+                        </li>
+                        <li class="rounded-full h-[100%] aspect-square flex items-center justify-center">
+                            <img src="../src/picture/menu(black).png" class="h-[50%] w-[50%] object-cover">
+                        </li>
+                        <li class="rounded-full h-[100%] aspect-square flex items-center justify-center">
+                            <img src="../src/picture/setting(black).png" class="h-[50%] w-[50%] object-cover">
+                        </li>
+                        <li class="bg-white rounded-full h-[100%] aspect-square flex items-center justify-center">
+                            <img src="../src/picture/revenge.jpg" class="h-[90%] w-[90%] rounded-full object-cover">
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex w-[100%] h-[1px] items-center justify-center mt-4"><hr class="w-[80%] border-1 border-black border-opacity-50"></div>
+                <!-- /Profil -->
+            </div>
         </div>
+        <!-- /layer Dasboard -->
     </div>
 </body>
 </html>
