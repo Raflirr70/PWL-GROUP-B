@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Public/src/css/style.css">
+    <title>Register</title>
+</head>
+<body class="bg-gray-900 flex items-center justify-center h-screen" style="background-image: url(../src/img/download.jpeg);">
+
+    <div class="flex w-3/4 bg-gray-800 rounded-2xl shadow-lg overflow-hidden">
+        <!-- Left Section (Logo) -->
+        <div class="w-1/3 bg-black flex flex-col justify-center items-center">
+            <img src="../src/img/DarkTheme.jpeg" class="w-[100%] h-[100%]">
+            <h1 class="text-white text-3xl font-bold">MyFilmList</h1>
+        </div>
+
+        <!-- Right Section (Register Form) -->
+        <div class="w-2/3 bg-gray-700 flex flex-col justify-center p-10">
+            <h2 class="text-2xl font-semibold text-gray-100 mb-6">Register</h2>
+
+            <!-- Username input -->
+            <div class="flex items-center bg-gray-800 p-2 mb-4 rounded-md">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11v1m-8 4h12m0-8H8" />
+                </svg>
+                <input type="text" placeholder="Username" class="bg-transparent w-full text-gray-300 outline-none">
+            </div>
+
+            <!-- Email input -->
+            <div class="flex items-center bg-gray-800 p-2 mb-4 rounded-md">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12H8m8 4H8m-6 0a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H4a2 2 0 01-2-2v-2zM8 8v1M4 8v1m6-5v1M8 8h8" />
+                </svg>
+                <input type="email" placeholder="Email address" class="bg-transparent w-full text-gray-300 outline-none">
+            </div>
+
+            <!-- Password input -->
+            <div class="flex items-center bg-gray-800 p-2 mb-4 rounded-md">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11v1m-6 4h12m2 0a2 2 0 01-2 2H6a2 2 0 01-2-2v-4a2 2 0 012-2h12a2 2 0 012 2v4zm-6 0v-4m0 0V7a2 2 0 00-2-2H9a2 2 0 00-2 2v4h6z" />
+                </svg>
+                <input type="password" placeholder="Password" class="bg-transparent w-full text-gray-300 outline-none">
+            </div>
+
+            <!-- Confirm Password input -->
+            <div class="flex items-center bg-gray-800 p-2 mb-6 rounded-md">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11v1m-6 4h12m2 0a2 2 0 01-2 2H6a2 2 0 01-2-2v-4a2 2 0 012-2h12a2 2 0 012 2v4zm-6 0v-4m0 0V7a2 2 0 00-2-2H9a2 2 0 00-2 2v4h6z" />
+                </svg>
+                <input type="password" placeholder="Confirm Password" class="bg-transparent w-full text-gray-300 outline-none">
+            </div>
+
+            <!-- Register Button -->
+            <button class="w-full bg-black text-white font-semibold py-2 rounded-md hover:bg-gray-900">REGISTER</button>
+
+            <!-- Login Link -->
+            <div class="text-gray-400 text-sm mt-4">
+                Already have an account? 
+                <a href="#" class="text-blue-500 hover:underline">Login</a>
+            </div>
+
+            <!-- Register with Social Media -->
+            <div class="mt-6">
+                <p class="text-center text-gray-300 mb-3">Register with</p>
+                <div class="flex justify-center gap-4">
+                    <button class="flex items-center bg-white px-4 py-2 rounded-lg text-black font-semibold">
+                        <img src="https://img.icons8.com/color/24/000000/google-logo.png" alt="Google" class="mr-2"/>
+                        Google
+                    </button>
+                    <button class="flex items-center bg-blue-400 px-4 py-2 rounded-lg text-white font-semibold">
+                        <img src="https://img.icons8.com/ios-filled/24/ffffff/twitter.png" alt="Twitter" class="mr-2"/>
+                        Twitter
+                    </button>
+                    <button class="flex items-center bg-blue-600 px-4 py-2 rounded-lg text-white font-semibold">
+                        <img src="https://img.icons8.com/ios-filled/24/ffffff/facebook-new.png" alt="Facebook" class="mr-2"/>
+                        Facebook
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
