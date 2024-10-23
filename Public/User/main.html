@@ -11,7 +11,7 @@
     <div class="nav fixed z-50 top-0 left-0 w-[100%] h-[75px] bg-gray-900">
         <table class="menunav h-[100%] w-[100%]">
             <tr class="menu h-full w-full">
-                <td class="w-[10%] font-bold text-[130%] pl-[3%] text-white">MyFilmList</td>
+                <td class="w-[10%] font-bold text-[130%] pl-[3%] text-white"><a href="main.html" class="text-white">MyFilmList</a></td>
                 <td class="w-[40%]"></td>
                 <td class="w-[5%] text-white">ad</td>
                 <td class="w-[5%] items-center"><img class="h-auto w-[80%]" src="../src/picture/menu(white).png"></td>
@@ -31,10 +31,36 @@
 <!-- NAVIGASI KONTEN (SEARCH) -->
         <div class="kontennav flex w-[100%] h-[55px] mt-[75px] bg-blue-600 text-white">
             <div class="kiri flex w-[50%]">
-                <div class="search px-5 h-auto flex items-center justify-center">Anime</div>
-                <div class="search px-5 h-auto flex items-center justify-center">Film</div>
-                <div class="search px-5 h-auto flex items-center justify-center">Community</div>
-                <div class="search px-5 h-auto flex items-center justify-center">News</div>
+                <!-- <div class="search px-5 h-auto flex items-center justify-center"><a href="DaftarFilm.html" class="text-white">Anime</a></div> -->
+                <div class="relative flex items-center justify-center px-5 h-auto group">
+                    <a href="DaftarFilm.html" class="text-white">Anime</a>
+                    <div class="absolute z-30 left-0 mt-48 w-40 bg-gray-800 text-white rounded-md hidden group-hover:block">
+                        <ul class="p-2">
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-700">Top List</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-700">Kategori</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-700">Update Lates</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="relative flex items-center justify-center px-5 h-auto group">
+                    <a href="DaftarFilm.html" class="text-white">Film</a>
+                    <div class="absolute z-30 left-0 mt-48 w-40 bg-gray-800 text-white rounded-md hidden group-hover:block">
+                        <ul class="p-2">
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-700">Top List</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-700">Kategori</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-700">Lates Lates</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="relative flex items-center justify-center px-5 h-auto group">
+                    <a href="DaftarFilm.html" class="text-white">Community</a>
+                    <div class="absolute z-30 left-0 mt-36 w-32 bg-gray-800 text-white rounded-md hidden group-hover:block">
+                        <ul class="p-2">
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-700">Review</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-700">Thread</a></li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="search px-5 h-auto flex items-center justify-center">Help</div>
             </div>
             <div class="kanan flex justify-end w-[50%]">
@@ -218,40 +244,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex h-[100px] w-[100%] mt-2 bg-gray-200 hover:scale-[102%]">
-                            <div class="fotoreview h-[100%] w-[100px] bg-slate-800 text-white">
-                                foto
-                            </div>
-                            <div class="isireview h-[100%] w-[100%] mx-2">
-                                <div class="h-1/4 w-[100%]">
-                                    <h2><b>Judul Film</b></h2>
-                                </div>
-                                <div class="h-2/4 w-[100%]">
-                                    <p class=" text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti necessitatibus officia sequi placeat perferendis, molestias natus consequatur minima, illum obcaecati aliquam repellendus cumque ex, vitae voluptas quia veritatis eligendi perspiciatis! illum obcaecati aliquam repellendus cumque ex, vitae voluptas quia veritatis eligendi perspiciatis!</p>
-                                </div>
-                                <div class="flex h-1/4 w-[100%]">
-                                    <div class="h-auto w-1/6 pl-10 text-xs">rating *****</div>
-                                    <div class="h-auto w-1/6  text-xs">review 1000M</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex h-[100px] w-[100%] mt-2 bg-gray-200 hover:scale-[102%]">
-                            <div class="fotoreview h-[100%] w-[100px] bg-slate-800 text-white">
-                                foto
-                            </div>
-                            <div class="isireview h-[100%] w-[100%] mx-2">
-                                <div class="h-1/4 w-[100%]">
-                                    <h2><b>Judul Film</b></h2>
-                                </div>
-                                <div class="h-2/4 w-[100%]">
-                                    <p class=" text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti necessitatibus officia sequi placeat perferendis, molestias natus consequatur minima, illum obcaecati aliquam repellendus cumque ex, vitae voluptas quia veritatis eligendi perspiciatis! illum obcaecati aliquam repellendus cumque ex, vitae voluptas quia veritatis eligendi perspiciatis!</p>
-                                </div>
-                                <div class="flex h-1/4 w-[100%]">
-                                    <div class="h-auto w-1/6 pl-10 text-xs">rating *****</div>
-                                    <div class="h-auto w-1/6  text-xs">review 1000M</div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     
                 </div>
@@ -261,25 +253,6 @@
                 <div class="comunitaslayer w-[100%] h-auto mt-10">
                     <div class="judul flex h-1/6 items-center">
                         <h2 class="text-xl"><b>Lates Upload Community</b></h2>
-                    </div>
-                    <div class="comunitas">
-                        <div class="flex h-[100px] w-[100%] mt-2 bg-gray-200 hover:scale-[102%]">
-                            <div class="fotoreview h-[100%] w-[100px] bg-slate-800 text-white">
-                                foto
-                            </div>
-                            <div class="isireview h-[100%] w-[100%] mx-2">
-                                <div class="h-[20%] w-[100%]">
-                                    <h2><b>Judul Komentar / Comunitas</b></h2>
-                                </div>
-                                <div class="h-[60%] w-[100%] flex px-5 items-center justify-center ">
-                                    <p class="text-xs">! illum obcaecati aliquam repellendus cumque ex, vitae voluptas quia veritatis eligendi perspiciatis!quia veritatis eligendi perspiciatis! illum obcaecati aliquam repellendus cumque ex, vitae voluptas quia veritatis eligendi perspiciatis!quia veritatis eligendi perspiciatis! illum obcaecati aliquam repellendus cumque ex, vitae voluptas quia veritatis eligendi perspiciatis!</p>
-                                </div>
-                                <div class="flex justify-end h-[10%] w-[100%]">
-                                    <div class="h-auto w-1/6 pl-10 text-xs">Comentar *****</div>
-                                    <div class="h-auto w-1/6  text-xs">Like 1000M</div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <div class="comunitas">
                         <div class="flex h-[100px] w-[100%] mt-2 bg-gray-200 hover:scale-[102%]">
