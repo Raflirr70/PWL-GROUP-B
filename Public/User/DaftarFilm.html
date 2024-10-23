@@ -8,18 +8,8 @@
 </head>
 <body class="m-0 p-0 bg-gray-300">
     <!-- NAVIGASI -->
-    <div class="nav fixed z-50 top-0 left-0 w-[100%] h-[75px] bg-gray-900">
-        <table class="menunav h-[100%] w-[100%]">
-            <tr class="menu h-full w-full">
-                <td class="w-[10%] font-bold text-[130%] pl-[3%] text-white"><a href="main.html" class="text-white">MyFilmList</a></td>
-                <td class="w-[40%]"></td>
-                <td class="w-[5%] text-white">ad</td>
-                <td class="w-[5%] items-center"><img class="h-auto w-[80%]" src="../src/picture/menu(white).png"></td>
-                <td class="w-[5%] items-center"><img class="h-auto w-[60%]" src="../src/picture/pesan(white).png"></td>
-                <td class="w-[20%] text-white border-l-2 pl-4">Profile</td>
-                <td class="w-[5%] items-center"><img class="h-auto w-[50%] -rotate-90 hover:rotate-0 transition duration-1000" src="../src/picture/setting(white).png"></td>
-            </tr>
-        </table>
+    <div class="nav fixed z-50 top-0 left-0 w-[100%] h-[75px] bg-gray-900" id="headindex">
+        
     </div>
 
 
@@ -32,7 +22,7 @@
         <div class="kiri flex w-[50%]">
             <!-- <div class="search px-5 h-auto flex items-center justify-center"><a href="DaftarFilm.html" class="text-white">Anime</a></div> -->
             <div class="relative flex items-center justify-center px-5 h-auto group">
-                <a href="DaftarFilm.html" class="text-white">Anime</a>
+                <a href="DaftarFilm.html?category=anime" class="text-white">Anime</a>
                 <div class="absolute z-30 left-0 mt-48 w-40 bg-gray-800 text-white rounded-md hidden group-hover:block">
                     <ul class="p-2">
                         <li><a href="#" class="block px-4 py-2 hover:bg-gray-700">Top List</a></li>
@@ -42,7 +32,7 @@
                 </div>
             </div>
             <div class="relative flex items-center justify-center px-5 h-auto group">
-                <a href="DaftarFilm.html" class="text-white">Film</a>
+                <a href="DaftarFilm.html?category=film" class="text-white">Film</a>
                 <div class="absolute z-30 left-0 mt-48 w-40 bg-gray-800 text-white rounded-md hidden group-hover:block">
                     <ul class="p-2">
                         <li><a href="#" class="block px-4 py-2 hover:bg-gray-700">Top List</a></li>
@@ -52,7 +42,7 @@
                 </div>
             </div>
             <div class="relative flex items-center justify-center px-5 h-auto group">
-                <a href="DaftarFilm.html" class="text-white">Community</a>
+                <a href="comunity.html" class="text-white">Community</a>
                 <div class="absolute z-30 left-0 mt-36 w-32 bg-gray-800 text-white rounded-md hidden group-hover:block">
                     <ul class="p-2">
                         <li><a href="#" class="block px-4 py-2 hover:bg-gray-700">Review</a></li>
@@ -60,7 +50,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="search px-5 h-auto flex items-center justify-center">Help</div>
+            <div class="search px-5 h-auto flex items-center justify-center"><a href="help.html" class="text-white">Help</a></div>
         </div>
         <div class="kanan flex justify-end w-[50%]">
             <div class="search px-5 h-auto flex items-center justify-center">
@@ -75,161 +65,107 @@
         </div>
     </div>
     <!-- Konten utama -->
-            <div class="konten flex w[100%] h-auto ml-3 p-3">
+            <div class="konten flex w-[100%] h-auto ml-3 p-3">
     <!-- Konten Utama kiri -->
                 <div class="kontenkiri w-[75%] mr-[2%] h-auto inline-block">
                     <!-- BARIS PERTAMA -->
                     <div class="updatefilm w-[100%] h-[300px]">
                         <div class="judul flex h-1/6 items-center">
-                            <h2 class="text-xl"><b>Top Anime Videos</b></h2>
+                            <h2 class="text-xl"><b id="content-title">Top Anime Videos</b></h2>
                         </div>
                         <div class="grid grid-cols-6 auto-rows-auto gap-3 overflow-hidden" id="Anime-container">
                         </div>
-                
-                        <script>
-                            for (let i = 0; i < 24; i++) {
-                                const filmDiv = document.createElement('div');
-                                filmDiv.className = 'relative h-[100%] w-full bg-slate-800 text-gray-400 hover:text-gray-50 hover:font-bold hover:scale-[102%] hover:brightness-125 transition-all duration-300';
-                                
-                                const img = document.createElement('img');
-                                img.src = '../src/picture/bnh.jpeg';
-                                img.className = 'w-full h-full object-cover';
-                                
-                                const p = document.createElement('p');
-                                p.className = 'absolute h-[20%] top-auto pl-2 pr-2 inset-0 flex items-end font-semibold text-white bg-gradient-to-t from-black/80 to-transparent word-break overflow-hidden';
-                                p.textContent = 'Boku No Hero Academi';
+                    </div>
+                </div>
+    
+    
+                <div class="kontenkanan w-[23%] h-auto border-2 "></div>
                     
-                                filmDiv.appendChild(img);
-                                filmDiv.appendChild(p);
-                                document.getElementById('Anime-container').appendChild(filmDiv);
-                            }
-                        </script>
-                    </div>
-                </div>
-    
-    
-                <div class="kontenkanan w-[23%] h-auto border-2 ">
-                    <div class="flex tabelkonten w-[100%] h-10 bg-gray-300 place-items-center">
-                        <h1 class="ml-3"><b>Top Airing Anime</b></h1>
-                        <p class="ml-auto mr-3 text-blue-800">menu</p>
-                    </div>
-                    <div class="tabelairing w-[100%] h-20 mt-1">
-                        <div class="isitabel flex w-[100%] h-[100%]">
-                            <div class="text-white text-xl mx-1 pt-1 text-slate-500"><b>1</b></div>
-                            <div class="foto h-[100%] w-20 bg-slate-500"></div>
-                            <div class="informasi ml-3">
-                                <div class="judul h-2/4 text-blue-800"><b>Konosubarashi sekai wo Sampo Kuda</b></div>
-                                <div class="informasi h-1/4 pt-1 text-slate-500">Informasi</div>
-                                <div class="informasi h-1/4 pt-1 text-slate-500">Informasi</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tabelairing w-[100%] h-20 mt-1">
-                        <div class="isitabel flex w-[100%] h-[100%]">
-                            <div class="text-white text-xl mx-1 pt-1 text-slate-500"><b>2</b></div>
-                            <div class="foto h-[100%] w-20 bg-slate-500"></div>
-                            <div class="informasi ml-3">
-                                <div class="judul h-2/4 text-blue-800"><b>Konosubarashi sekai wo Sampo Kuda</b></div>
-                                <div class="informasi h-1/4 pt-1 text-slate-500">Informasi</div>
-                                <div class="informasi h-1/4 pt-1 text-slate-500">Informasi</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tabelairing w-[100%] h-20 mt-1">
-                        <div class="isitabel flex w-[100%] h-[100%]">
-                            <div class="text-white text-xl mx-1 pt-1 text-slate-500"><b>3</b></div>
-                            <div class="foto h-[100%] w-20 bg-slate-500"></div>
-                            <div class="informasi ml-3">
-                                <div class="judul h-2/4 text-blue-800"><b>Konosubarashi sekai wo Sampo Kuda</b></div>
-                                <div class="informasi h-1/4 pt-1 text-slate-500">Informasi</div>
-                                <div class="informasi h-1/4 pt-1 text-slate-500">Informasi</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tabelairing w-[100%] h-20 mt-1">
-                        <div class="isitabel flex w-[100%] h-[100%]">
-                            <div class="text-white text-xl mx-1 pt-1 text-slate-500"><b>4</b></div>
-                            <div class="foto h-[100%] w-20 bg-slate-500"></div>
-                            <div class="informasi ml-3">
-                                <div class="judul h-2/4 text-blue-800"><b>Konosubarashi sekai wo Sampo Kuda</b></div>
-                                <div class="informasi h-1/4 pt-1 text-slate-500">Informasi</div>
-                                <div class="informasi h-1/4 pt-1 text-slate-500">Informasi</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tabelairing w-[100%] h-20 mt-1">
-                        <div class="isitabel flex w-[100%] h-[100%]">
-                            <div class="text-white text-xl mx-1 pt-1 text-slate-500"><b>5</b></div>
-                            <div class="foto h-[100%] w-20 bg-slate-500"></div>
-                            <div class="informasi ml-3">
-                                <div class="judul h-2/4 text-blue-800"><b>Konosubarashi sekai wo Sampo Kuda</b></div>
-                                <div class="informasi h-1/4 pt-1 text-slate-500">Informasi</div>
-                                <div class="informasi h-1/4 pt-1 text-slate-500">Informasi</div>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="flex tabelkonten w-[100%] h-10 bg-gray-300 place-items-center mt-10">
-                        <h1 class="ml-3"><b>Top Airing Anime</b></h1>
-                        <p class="ml-auto mr-3 text-blue-800">menu</p>
-                    </div>
-                    <div class="tabelairing w-[100%] h-20 mt-1">
-                        <div class="isitabel flex w-[100%] h-[100%]">
-                            <div class="text-white text-xl mx-1 pt-1 text-slate-500"><b>1</b></div>
-                            <div class="foto h-[100%] w-20 bg-slate-500"></div>
-                            <div class="informasi ml-3">
-                                <div class="judul h-2/4 text-blue-800"><b>Konosubarashi sekai wo Sampo Kuda</b></div>
-                                <div class="informasi h-1/4 pt-1 text-slate-500">Informasi</div>
-                                <div class="informasi h-1/4 pt-1 text-slate-500">Informasi</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tabelairing w-[100%] h-20 mt-1">
-                        <div class="isitabel flex w-[100%] h-[100%]">
-                            <div class="text-white text-xl mx-1 pt-1 text-slate-500"><b>2</b></div>
-                            <div class="foto h-[100%] w-20 bg-slate-500"></div>
-                            <div class="informasi ml-3">
-                                <div class="judul h-2/4 text-blue-800"><b>Konosubarashi sekai wo Sampo Kuda</b></div>
-                                <div class="informasi h-1/4 pt-1 text-slate-500">Informasi</div>
-                                <div class="informasi h-1/4 pt-1 text-slate-500">Informasi</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tabelairing w-[100%] h-20 mt-1">
-                        <div class="isitabel flex w-[100%] h-[100%]">
-                            <div class="text-white text-xl mx-1 pt-1 text-slate-500"><b>3</b></div>
-                            <div class="foto h-[100%] w-20 bg-slate-500"></div>
-                            <div class="informasi ml-3">
-                                <div class="judul h-2/4 text-blue-800"><b>Konosubarashi sekai wo Sampo Kuda</b></div>
-                                <div class="informasi h-1/4 pt-1 text-slate-500">Informasi</div>
-                                <div class="informasi h-1/4 pt-1 text-slate-500">Informasi</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tabelairing w-[100%] h-20 mt-1">
-                        <div class="isitabel flex w-[100%] h-[100%]">
-                            <div class="text-white text-xl mx-1 pt-1 text-slate-500"><b>4</b></div>
-                            <div class="foto h-[100%] w-20 bg-slate-500"></div>
-                            <div class="informasi ml-3">
-                                <div class="judul h-2/4 text-blue-800"><b>Konosubarashi sekai wo Sampo Kuda</b></div>
-                                <div class="informasi h-1/4 pt-1 text-slate-500">Informasi</div>
-                                <div class="informasi h-1/4 pt-1 text-slate-500">Informasi</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tabelairing w-[100%] h-20 mt-1">
-                        <div class="isitabel flex w-[100%] h-[100%]">
-                            <div class="text-white text-xl mx-1 pt-1 text-slate-500"><b>5</b></div>
-                            <div class="foto h-[100%] w-20 bg-slate-500"></div>
-                            <div class="informasi ml-3">
-                                <div class="judul h-2/4 text-blue-800"><b>Konosubarashi sekai wo Sampo Kuda</b></div>
-                                <div class="informasi h-1/4 pt-1 text-slate-500">Informasi</div>
-                                <div class="informasi h-1/4 pt-1 text-slate-500">Informasi</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
 </body>
+
+<script>
+    //mengambil parameter GET dari URL
+    function getParameterByName(name) {
+        const url = new URL(window.location.href);
+        return url.searchParams.get(name);
+    }
+
+     // Fungsi untuk menampilkan konten kanan sesuai dengan kategori (anime / film)
+     function loadContent(category) {
+        const titleElement = document.getElementById('content-title');
+        const containerElement = document.getElementById('Anime-container');
+
+        // containerElement.innerHTML = ''; // Bersihkan konten sebelumnya
+
+        if (category === 'anime') {
+            titleElement.textContent = 'Top Anime Videos';
+            for (let i = 0; i < 24; i++) {
+                const filmDiv = document.createElement('div');
+                filmDiv.className = 'relative h-60 bg-slate-800 text-gray-400 hover:text-gray-50 hover:font-bold hover:scale-[102%] hover:brightness-125 transition-all duration-300';
+                
+                const img = document.createElement('img');
+                img.src = '../src/picture/bnh.jpeg';
+                img.className = 'w-full h-full object-cover';
+                
+                const p = document.createElement('p');
+                p.className = 'absolute h-[20%] top-auto pl-2 pr-2 inset-0 flex items-end font-semibold text-white bg-gradient-to-t from-black/80 to-transparent word-break overflow-hidden';
+                p.textContent = 'Boku No Hero Academi';
+    
+                filmDiv.appendChild(img);
+                filmDiv.appendChild(p);
+                document.getElementById('Anime-container').appendChild(filmDiv);
+            }
+        } else if (category === 'film') {
+            titleElement.textContent = 'Top Film Videos';
+            for (let i = 0; i < 24; i++) {
+                const filmDiv = document.createElement('div');
+                filmDiv.className = 'relative h-60 bg-slate-800 text-gray-400 hover:text-gray-50 hover:font-bold hover:scale-[102%] hover:brightness-125 transition-all duration-300';
+                
+                const img = document.createElement('img');
+                img.src = '../src/picture/revenge.jpg';
+                img.className = 'w-full h-full object-cover';
+                
+                const p = document.createElement('p');
+                p.className = 'absolute h-[20%] top-auto pl-2 pr-2 inset-0 flex items-end font-semibold text-white bg-gradient-to-t from-black/80 to-transparent word-break overflow-hidden';
+                p.textContent = 'Revenge Of The Fallen';
+    
+                filmDiv.appendChild(img);
+                filmDiv.appendChild(p);
+                containerElement.appendChild(filmDiv);
+            }
+        } else {
+            titleElement.textContent = 'Category not found';
+        }
+    }
+    function loadKontenKanan() {
+        fetch('../layout/kontenkanan.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('.kontenkanan').innerHTML = data;
+            })
+            .catch(error => console.log('Error loading konten kanan:', error));
+    }
+    function loadhead() {
+        fetch('../layout/head.html')
+        .then(response => response.text())
+        .then(data => {
+            document.querySelector('#headindex').innerHTML = data;
+        })
+        .catch(error => console.log('Error loading menu:', error));
+    }
+
+    function toggleMenu() {
+        const menu = document.getElementById('menu');
+        menu.classList.toggle('hidden');
+    }
+    window.onload = function() {
+        loadhead();
+        const category = getParameterByName('category');
+        loadContent(category || 'anime');
+        loadKontenKanan();
+    };
+</script>
+
 </html>
