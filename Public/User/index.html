@@ -3,15 +3,309 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="/Public/src/css/style.css">
+    <title>MyFilmList</title>
 </head>
-<body>
-    <div class="utama mx-auto m-0 p-0 grid place-items-center h-screen bg-black">
-        <div class="layerlogin flex w-[60%] h-[70%] rounded-3xl overflow-hidden">
-            <div class="sublayerlogin bg-yellow-500 w-[50%] h-[100%]"></div>
-            <div class="sublayerlogin bg-gray-500 w-[50%] h-[100%]"></div>
+<body class="m-0 p-0 bg-gray-300">
+    <!-- NAVIGASI -->
+    <div class="nav fixed z-50 top-0 left-0 w-[100%] h-[75px] bg-gray-900" id="headindex">
+        
+    </div>
+
+
+<!-- AKHIR NAVIGASI -->
+
+
+<!-- Konten Utama -->
+    <div class="utama mx-5 p-0 grid place-items-center h-auto bg-gray-200">
+        <div class="navbar w-full h-full"></div>
+        <div class="konten flex w[100%] h-auto ml-3 p-3">
+<!-- Konten Utama kiri -->
+            <div class="kontenkiri w-[75%] mr-[2%] h-auto inline-block">
+                <!-- BARIS PERTAMA -->
+                <div class="updatefilm w-[100%] h-[300px]">
+                    <div class="judul flex h-1/6 items-center">
+                        <h2 class="text-xl"><b>Top Anime Videos</b></h2>
+                    </div>
+                    <div class="flex h-5/6 overflow-hidden ">
+                        <div class="h-[110%] w-[3%] flex justify-center bg-slate-300 bg-opacity-50  -mt-[2%] -mr-[3%] z-10 text-gray-400 hover:bg-slate-800 hover:bg-opacity-90 hover:w-[4%] hover:text-gray-200 transition-all duration-300">
+                            <p class="my-auto font-extrabold scale-y-[500%] scale-x-[200%]"><</p>
+                        </div>
+
+                        <div class="filmslide flex w-[90%]" id="Anime-container"></div>
+
+                        <div class="h-[110%] w-[4%] flex justify-center bg-slate-300 bg-opacity-50 -ml-[1%] -mt-[2%] z-10 text-gray-400 hover:bg-slate-800 hover:bg-opacity-90 hover:w-[6%] hover:text-gray-200 transition-all duration-300">
+                            <p class="my-auto font-extrabold scale-y-[500%] scale-x-[200%]">></p>
+                        </div>
+                    </div>
+                    
+                    <script>
+                        for (let i = 0; i < 5; i++) {
+                            const filmDiv = document.createElement('div');
+                            filmDiv.className = 'relative h-[100%] w-1/5 mr-2 bg-slate-800 text-gray-400 hover:text-gray-50 hover:font-bold hover:scale-[102%] hover:brightness-125 transition-all duration-300';
+                            
+                            const img = document.createElement('img');
+                            img.src = '../src/picture/bnh.jpeg';
+                            img.className = 'w-full h-full object-cover';
+                            
+                            const p = document.createElement('p');
+                            p.className = 'absolute h-[20%] top-auto pl-2 pr-2 inset-0 flex items-end font-semibold text-white bg-gradient-to-t from-black/80 to-transparent word-break overflow-hidden';
+                            p.textContent = 'Boku No Hero Academi';
+                
+                            filmDiv.appendChild(img);
+                            filmDiv.appendChild(p);
+                            document.getElementById('Anime-container').appendChild(filmDiv);
+                        }
+                    </script>
+                </div>
+
+                <div class="ExcitingMovie w-[100%] h-[300px] mt-5">
+                    <div class="judul flex h-1/6 items-center">
+                        <h2 class="text-xl"><b>Top Film Videos</b></h2>
+                    </div>
+                    <div class="flex h-5/6 overflow-hidden ">
+                        <div class="h-[110%] w-[3%] flex justify-center bg-slate-300 bg-opacity-50  -mt-[2%] -mr-[3%] z-10 text-gray-400 hover:bg-slate-800 hover:bg-opacity-90 hover:w-[4%] hover:text-gray-200 transition-all duration-300">
+                            <p class="my-auto font-extrabold scale-y-[500%] scale-x-[200%]"><</p>
+                        </div>
+
+                        <div class="filmslide flex w-[90%]" id="film-container"></div>
+
+                        <div class="h-[110%] w-[4%] flex justify-center bg-slate-300 bg-opacity-50 -ml-[1%] -mt-[2%] z-10 text-gray-400 hover:bg-slate-800 hover:bg-opacity-90 hover:w-[6%] hover:text-gray-200 transition-all duration-300">
+                            <p class="my-auto font-extrabold scale-y-[500%] scale-x-[200%]">></p>
+                        </div>
+                    </div>
+                    
+                    <script>
+                        for (let i = 0; i < 5; i++) {
+                            const filmDiv = document.createElement('div');
+                            filmDiv.className = 'relative h-[100%] w-1/5 mr-2 bg-slate-800 text-gray-400 hover:text-gray-50 hover:font-bold hover:scale-[102%] hover:brightness-125 transition-all duration-300';
+                            
+                            const img = document.createElement('img');
+                            img.src = '../src/picture/revenge.jpg'; // Pastikan path ini benar
+                            img.className = 'w-full h-full object-cover';
+                            
+                            const p = document.createElement('p');
+                            p.className = 'absolute h-[20%] top-auto pl-2 pr-2 inset-0 flex items-end font-semibold text-white bg-gradient-to-t from-black/80 to-transparent word-break overflow-hidden';
+                            p.textContent = 'Revenge Of The Fallen';
+                
+                            filmDiv.appendChild(img);
+                            filmDiv.appendChild(p);
+                            document.getElementById('film-container').appendChild(filmDiv);
+                        }
+                    </script>
+                </div>
+
+                <div class="AsianCrimeFilm w-[100%] h-[300px] mt-5">
+                    <div class="judul flex h-1/6 items-center">
+                        <h2 class="text-xl"><b>Lates Updated Episode Videos</b></h2>
+                    </div>
+                    <div class="flex h-5/6 overflow-hidden ">
+                        <div class="h-[110%] w-[3%] flex justify-center bg-slate-300 bg-opacity-50  -mt-[2%] -mr-[3%] z-10 text-gray-400 hover:bg-slate-800 hover:bg-opacity-90 hover:w-[4%] hover:text-gray-200 transition-all duration-300">
+                            <p class="my-auto font-extrabold scale-y-[500%] scale-x-[200%]"><</p>
+                        </div>
+
+                        <div class="filmslide flex w-[90%]" id="lates-container"></div>
+
+                        <div class="h-[110%] w-[4%] flex justify-center bg-slate-300 bg-opacity-50 -ml-[1%] -mt-[2%] z-10 text-gray-400 hover:bg-slate-800 hover:bg-opacity-90 hover:w-[6%] hover:text-gray-200 transition-all duration-300">
+                            <p class="my-auto font-extrabold scale-y-[500%] scale-x-[200%]">></p>
+                        </div>
+                    </div>
+                    
+                    <script>
+                        for (let i = 0; i < 5; i++) {
+                            const filmDiv = document.createElement('div');
+                            filmDiv.className = 'relative h-[100%] w-1/5 mr-2 bg-slate-800 text-gray-400 hover:text-gray-50 hover:font-bold hover:scale-[102%] hover:brightness-125 transition-all duration-300';
+                            
+                            const img = document.createElement('img');
+                            img.src = '../src/picture/revenge.jpg'; // Pastikan path ini benar
+                            img.className = 'w-full h-full object-cover';
+                            
+                            const p = document.createElement('p');
+                            p.className = 'absolute h-[20%] top-auto pl-2 pr-2 inset-0 flex items-end font-semibold text-white bg-gradient-to-t from-black/80 to-transparent word-break overflow-hidden';
+                            p.textContent = 'Revenge Of The Fallen';
+                
+                            filmDiv.appendChild(img);
+                            filmDiv.appendChild(p);
+                            document.getElementById('lates-container').appendChild(filmDiv);
+                        }
+                    </script>
+                </div>
+<!-- HALAMAN REVIEW -->
+                <div class="reviewlayer w-[100%] h-auto mt-5">
+                    <div class="judul flex h-1/6 items-center">
+                        <h2 class="text-xl"><b>Lates Film Review</b></h2>
+                    </div>
+                    <div class="review">
+                        <div class="flex h-[100px] w-[100%] mt-2 bg-gray-200 hover:scale-[102%]">
+                            <div class="fotoreview h-[100%] w-[100px] bg-slate-800 text-white">
+                                foto
+                            </div>
+                            <div class="isireview h-[100%] w-[100%] mx-2">
+                                <div class="h-1/4 w-[100%]">
+                                    <h2><b>Judul Film</b></h2>
+                                </div>
+                                <div class="h-2/4 w-[100%]">
+                                    <p class=" text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti necessitatibus officia sequi placeat perferendis, molestias natus consequatur minima, illum obcaecati aliquam repellendus cumque ex, vitae voluptas quia veritatis eligendi perspiciatis! illum obcaecati aliquam repellendus cumque ex, vitae voluptas quia veritatis eligendi perspiciatis!</p>
+                                </div>
+                                <div class="flex h-1/4 w-[100%]">
+                                    <div class="h-auto w-1/6 pl-10 text-xs">rating *****</div>
+                                    <div class="h-auto w-1/6  text-xs">review 1000M</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex h-[100px] w-[100%] mt-2 bg-gray-200 hover:scale-[102%]">
+                            <div class="fotoreview h-[100%] w-[100px] bg-slate-800 text-white">
+                                foto
+                            </div>
+                            <div class="isireview h-[100%] w-[100%] mx-2">
+                                <div class="h-1/4 w-[100%]">
+                                    <h2><b>Judul Film</b></h2>
+                                </div>
+                                <div class="h-2/4 w-[100%]">
+                                    <p class=" text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti necessitatibus officia sequi placeat perferendis, molestias natus consequatur minima, illum obcaecati aliquam repellendus cumque ex, vitae voluptas quia veritatis eligendi perspiciatis! illum obcaecati aliquam repellendus cumque ex, vitae voluptas quia veritatis eligendi perspiciatis!</p>
+                                </div>
+                                <div class="flex h-1/4 w-[100%]">
+                                    <div class="h-auto w-1/6 pl-10 text-xs">rating *****</div>
+                                    <div class="h-auto w-1/6  text-xs">review 1000M</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex h-[100px] w-[100%] mt-2 bg-gray-200 hover:scale-[102%]">
+                            <div class="fotoreview h-[100%] w-[100px] bg-slate-800 text-white">
+                                foto
+                            </div>
+                            <div class="isireview h-[100%] w-[100%] mx-2">
+                                <div class="h-1/4 w-[100%]">
+                                    <h2><b>Judul Film</b></h2>
+                                </div>
+                                <div class="h-2/4 w-[100%]">
+                                    <p class=" text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti necessitatibus officia sequi placeat perferendis, molestias natus consequatur minima, illum obcaecati aliquam repellendus cumque ex, vitae voluptas quia veritatis eligendi perspiciatis! illum obcaecati aliquam repellendus cumque ex, vitae voluptas quia veritatis eligendi perspiciatis!</p>
+                                </div>
+                                <div class="flex h-1/4 w-[100%]">
+                                    <div class="h-auto w-1/6 pl-10 text-xs">rating *****</div>
+                                    <div class="h-auto w-1/6  text-xs">review 1000M</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+<!-- AKHIR HALAMAN REVIEW -->
+
+<!-- HALAMAN KOMUNITAS -->
+                <div class="comunitaslayer w-[100%] h-auto mt-10">
+                    <div class="judul flex h-1/6 items-center">
+                        <h2 class="text-xl"><b>Lates Upload Community</b></h2>
+                    </div>
+                    <div class="comunitas">
+                        <div class="flex h-[100px] w-[100%] mt-2 bg-gray-200 hover:scale-[102%]">
+                            <div class="fotoreview h-[100%] w-[100px] bg-slate-800 text-white">
+                                foto
+                            </div>
+                            <div class="isireview h-[100%] w-[100%] mx-2">
+                                <div class="h-[20%] w-[100%]">
+                                    <h2><b>Judul Komentar / Comunitas</b></h2>
+                                </div>
+                                <div class="h-[60%] w-[100%] flex px-5 items-center justify-center ">
+                                    <p class="text-xs">! illum obcaecati aliquam repellendus cumque ex, vitae voluptas quia veritatis eligendi perspiciatis!quia veritatis eligendi perspiciatis! illum obcaecati aliquam repellendus cumque ex, vitae voluptas quia veritatis eligendi perspiciatis!quia veritatis eligendi perspiciatis! illum obcaecati aliquam repellendus cumque ex, vitae voluptas quia veritatis eligendi perspiciatis!</p>
+                                </div>
+                                <div class="flex justify-end h-[10%] w-[100%]">
+                                    <div class="h-auto w-1/6 pl-10 text-xs">Comentar *****</div>
+                                    <div class="h-auto w-1/6  text-xs">Like 1000M</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comunitas">
+                        <div class="flex h-[100px] w-[100%] mt-2 bg-gray-200 hover:scale-[102%]">
+                            <div class="fotoreview h-[100%] w-[100px] bg-slate-800 text-white">
+                                foto
+                            </div>
+                            <div class="isireview h-[100%] w-[100%] mx-2">
+                                <div class="h-[20%] w-[100%]">
+                                    <h2><b>Judul Komentar / Comunitas</b></h2>
+                                </div>
+                                <div class="h-[60%] w-[100%] flex px-5 items-center justify-center ">
+                                    <p class="text-xs">! illum obcaecati aliquam repellendus cumque ex, vitae voluptas quia veritatis eligendi perspiciatis!quia veritatis eligendi perspiciatis! illum obcaecati aliquam repellendus cumque ex, vitae voluptas quia veritatis eligendi perspiciatis!quia veritatis eligendi perspiciatis! illum obcaecati aliquam repellendus cumque ex, vitae voluptas quia veritatis eligendi perspiciatis!</p>
+                                </div>
+                                <div class="flex justify-end h-[10%] w-[100%]">
+                                    <div class="h-auto w-1/6 pl-10 text-xs">Comentar *****</div>
+                                    <div class="h-auto w-1/6  text-xs">Like 1000M</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comunitas">
+                        <div class="flex h-[100px] w-[100%] mt-2 bg-gray-200 hover:scale-[102%]">
+                            <div class="fotoreview h-[100%] w-[100px] bg-slate-800 text-white">
+                                foto
+                            </div>
+                            <div class="isireview h-[100%] w-[100%] mx-2">
+                                <div class="h-[20%] w-[100%]">
+                                    <h2><b>Judul Komentar / Comunitas</b></h2>
+                                </div>
+                                <div class="h-[60%] w-[100%] flex px-5 items-center justify-center ">
+                                    <p class="text-xs">! illum obcaecati aliquam repellendus cumque ex, vitae voluptas quia veritatis eligendi perspiciatis!quia veritatis eligendi perspiciatis! illum obcaecati aliquam repellendus cumque ex, vitae voluptas quia veritatis eligendi perspiciatis!quia veritatis eligendi perspiciatis! illum obcaecati aliquam repellendus cumque ex, vitae voluptas quia veritatis eligendi perspiciatis!</p>
+                                </div>
+                                <div class="flex justify-end h-[10%] w-[100%]">
+                                    <div class="h-auto w-1/6 pl-10 text-xs">Comentar *****</div>
+                                    <div class="h-auto w-1/6  text-xs">Like 1000M</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!-- AKHIR HALAMAN KOMUNITAS -->
+
+
+            <div class="kontenkanan w-[23%] h-auto border-2 ">
+                
+            </div>
+            
+        </div>
+        
+    </div>
+    <div class="footer grid konten h-auto bg-gray-700">
+        <div class="w-[100%] h-[200px] border-4">
+
         </div>
     </div>
 </body>
+<script>
+    function loadNav() {
+        fetch('../layout/nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('.navbar').innerHTML = data;
+            })
+    }
+    function loadKontenKanan() {
+        // Memuat kontenkanan.html ke elemen dengan class konten kanan
+        fetch('../layout/kontenkanan.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('.kontenkanan').innerHTML = data;
+            })
+            .catch(error => console.log('Error loading konten kanan:', error));
+    }
+    function loadhead() {
+        fetch('../layout/head.html')
+        .then(response => response.text())
+        .then(data => {
+            document.querySelector('#headindex').innerHTML = data; // gunakan '#' untuk id
+        })
+    }
+    function toggleMenu() {
+        const menu = document.getElementById('menu');
+        menu.classList.toggle('hidden');
+    }
+
+    window.onload = function() {
+        loadhead();
+        loadNav();
+        loadKontenKanan();
+    };
+</script>
+
 </html>
